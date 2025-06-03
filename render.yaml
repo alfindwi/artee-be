@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: artee-backend
+    env: java
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/your-app.jar"
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://yourdb:5432/dbname
+      - key: SPRING_DATASOURCE_USERNAME
+        value: youruser
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: yourpassword
