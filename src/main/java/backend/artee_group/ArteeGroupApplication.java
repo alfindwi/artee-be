@@ -1,23 +1,13 @@
 package backend.artee_group;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class ArteeGroupApplication {
 
-    public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(ArteeGroupApplication.class);
-        Map<String, Object> props = new HashMap<>();
-        String port = System.getenv("PORT");
-        if (port != null) {
-            props.put("server.port", port);
-        }
-        app.setDefaultProperties(props);
-        app.run(args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(ArteeGroupApplication.class, args);
+	}
 
 }
