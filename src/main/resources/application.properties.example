@@ -1,0 +1,7 @@
+spring.application.name=artee-be
+spring.datasource.url=jdbc:postgresql://localhost:5432/artee_db
+spring.datasource.username=yourusername
+spring.datasource.password=yourpassword
+
+spring.jpa.hibernate.ddl-auto=update
+jwt.secret=yourjwtsecret
