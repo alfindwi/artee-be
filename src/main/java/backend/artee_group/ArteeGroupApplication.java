@@ -7,10 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class YourApplication {
+public class ArteeGroupApplication {
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(YourApplication.class);
+        SpringApplication app = new SpringApplication(ArteeGroupApplication.class);
         Map<String, Object> props = new HashMap<>();
         String port = System.getenv("PORT");
         if (port != null) {
@@ -19,5 +19,5 @@ public class YourApplication {
         app.setDefaultProperties(props);
         app.run(args);
     }
-}
 
+}
