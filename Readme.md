@@ -21,7 +21,7 @@ Backend API for a task management application using Spring Boot and JWT authenti
 
 | Method | Endpoint         | Auth Required | Description                      |
 |--------|------------------|---------------|----------------------------------|
-| POST   | `/tasks`         | ✅ Yes        | Create a new task (title required) |
+| POST   | `/tasks`         | ❌ No         | Create a new task (title required) |
 | GET    | `/tasks`         | ❌ No         | Retrieve all tasks              |
 | PATCH  | `/tasks/:id`     | ✅ Yes        | Toggle task completion status   |
 | DELETE | `/tasks/:id`     | ✅ Yes        | Delete a task                   |
@@ -46,8 +46,8 @@ Backend API for a task management application using Spring Boot and JWT authenti
 ### 1. Clone the Project
 
 ```bash
-git clone https://github.com/your-name/task-backend.git
-cd task-backend
+git clone https://github.com/alfindwi/artee-be.git
+cd artee-be
 ```
 
 ### 2. Configure Database
@@ -74,7 +74,6 @@ curl -X POST http://localhost:8080/auth/login \
 
 # Create task
 curl -X POST http://localhost:8080/tasks \
-  -H "Authorization: Bearer <your_token>" \
   -H "Content-Type: application/json" \
   -d '{"title": "Do Homework"}'
 ```
