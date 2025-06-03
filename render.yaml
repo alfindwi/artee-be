@@ -6,8 +6,8 @@ services:
     startCommand: "java -jar target/artee-group.jar"
     envVars:
       - key: SPRING_DATASOURCE_URL
-        value: jdbc:postgresql://yourdb:5432/dbname
+        value: jdbc:postgresql://ep-rapid-thunder-a175uiqx-pooler.ap-southeast-1.aws.neon.tech/artee-be?sslmode=require
       - key: SPRING_DATASOURCE_USERNAME
-        value: youruser
+        value: artee-be_owner
       - key: SPRING_DATASOURCE_PASSWORD
-        value: yourpassword
+        value: npg_pnTezm4CBPq9
