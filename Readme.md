@@ -21,7 +21,7 @@ Backend API for a task management application using Spring Boot and JWT authenti
 
 | Method | Endpoint         | Auth Required | Description                      |
 |--------|------------------|---------------|----------------------------------|
-| POST   | `/tasks`         | ❌ No         | Create a new task (title required) |
+| POST   | `/tasks`         | ✅ Yes        | Create a new task (title required) |
 | GET    | `/tasks`         | ❌ No         | Retrieve all tasks              |
 | PATCH  | `/tasks/:id`     | ✅ Yes        | Toggle task completion status   |
 | DELETE | `/tasks/:id`     | ✅ Yes        | Delete a task                   |
