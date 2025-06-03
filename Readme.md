@@ -1,6 +1,6 @@
 # 📦 Task Management App – Backend
 
-Backend API untuk aplikasi manajemen tugas menggunakan Spring Boot dan JWT authentication.
+Backend API for a task management application using Spring Boot and JWT authentication.
 
 ## ✅ Requirements
 
@@ -12,8 +12,8 @@ Backend API untuk aplikasi manajemen tugas menggunakan Spring Boot dan JWT authe
 ## 🔐 Authentication
 
 - JWT-based authentication
-- Token harus dikirim lewat `Authorization: Bearer <token>`
-- Endpoints `/auth/**` bebas diakses, lainnya membutuhkan token valid
+- Token must be included in the header as `Authorization: Bearer <token>`
+- Endpoints under `/auth/**` are public; all others require a valid token
 
 ## 📚 API Endpoints
 
@@ -21,17 +21,17 @@ Backend API untuk aplikasi manajemen tugas menggunakan Spring Boot dan JWT authe
 
 | Method | Endpoint         | Auth Required | Description                      |
 |--------|------------------|---------------|----------------------------------|
-| POST   | `/tasks`         | ✅ Yes        | Create new task (title required)|
-| GET    | `/tasks`         | ❌ No         | List all tasks                  |
-| PATCH  | `/tasks/:id`     | ✅ Yes        | Toggle task completion          |
+| POST   | `/tasks`         | ✅ Yes        | Create a new task (title required) |
+| GET    | `/tasks`         | ❌ No         | Retrieve all tasks              |
+| PATCH  | `/tasks/:id`     | ✅ Yes        | Toggle task completion status   |
 | DELETE | `/tasks/:id`     | ✅ Yes        | Delete a task                   |
 
 ### 🔐 Auth
 
-| Method | Endpoint         | Description          |
-|--------|------------------|----------------------|
-| POST   | `/auth/register` | Register new user    |
-| POST   | `/auth/login`    | Login and get token  |
+| Method | Endpoint         | Description              |
+|--------|------------------|--------------------------|
+| POST   | `/auth/register` | Register a new user      |
+| POST   | `/auth/login`    | Login and retrieve token |
 
 ## 🧱 Tech Stack
 
@@ -41,16 +41,17 @@ Backend API untuk aplikasi manajemen tugas menggunakan Spring Boot dan JWT authe
 - PostgreSQL
 - Maven
 
-## ⚙️ Run Locally
+## ⚙️ Getting Started
 
-### 1. **Clone project**
+### 1. Clone the Project
 
 ```bash
 git clone https://github.com/your-name/task-backend.git
 cd task-backend
 ```
 
-### 2. Configure DB in application.properties
+### 2. Configure Database
+Edit the application.properties file:
 ```bash
 spring.datasource.url=jdbc:postgresql://localhost:5432/artee_db
 spring.datasource.username=root
@@ -64,7 +65,7 @@ mvn spring-boot:run
 ```
 
 
-### 🧪 Sample cURL
+### 🧪 Sample cURL CommandsL
 ```bash
 # Login
 curl -X POST http://localhost:8080/auth/login \
